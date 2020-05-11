@@ -79,7 +79,7 @@ def change_ball_speed(rect1, rect2):
 	return flag
 
 def main():
-	# pygame.mixer.music.play(-1)
+	pygame.mixer.music.play(-1)
 	clock = pygame.time.Clock()
 	# 创建玩家和球
 	player = broad.Broad(size)
@@ -128,10 +128,10 @@ def main():
 			if not running:
 				myball.moveRight(flag)
 
-		if score - score_flag > 300:
-			score_flag = score
-			myball.x_speed += (1 if myball.x_speed > 0 else -1)
-			myball.y_speed += (1 if myball.y_speed > 0 else -1)
+		# if score - score_flag > 300:
+		# 	score_flag = score
+		# 	myball.x_speed += (1 if myball.x_speed > 0 else -1)
+		# 	myball.y_speed += (1 if myball.y_speed > 0 else -1)
 		
 		if running:
 			myball.autoMove()
